@@ -1,0 +1,17 @@
+.outerBox {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 10px;
+}
+
+.innerBox {
+  width: 95%;
+  padding: 10px;
+  margin: 0 auto;
+}
+
+#header {
+  text-align: center;
+  letter-spacing: 0.2em;
+  margin-bottom: 10px;
+}
