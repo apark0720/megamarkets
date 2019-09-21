@@ -1,23 +1,23 @@
 
-import * as types from './actionTypes'
+import actionTypes from './actionTypes'
 
 export const addCard = (marketId) => ({
-  type: types.ADD_CARD,
+  type: actionTypes.ADD_CARD,
   marketId,
 });
 
 export const deleteCard = (marketId) => ({
-  type: types.DELETE_CARD,
+  type: actionTypes.DELETE_CARD,
   marketId,
 });
 
 export const updateLocation = (location) => ({
-  type: types.UPDATE_LOCATION,
+  type: actionTypes.UPDATE_LOCATION,
   location,
 })
 
 export const addMarket = (location) => ({
-  type: types.ADD_MARKET,
+  type: actionTypes.ADD_MARKET,
   location,
 });
 

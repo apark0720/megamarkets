@@ -1,4 +1,4 @@
-import * as types from './actionTypes';
+import actionTypes from './actionTypes';
 
 const initialState = {
   marketList: [],
@@ -11,7 +11,7 @@ const marketsReducer = (state=initialState, action) => {
   let marketList = [...state.marketList]
   
   switch(action.type) {
-    case types.ADD_MARKET:
+    case actionTypes.ADD_MARKET:
       const newMarket = {
           marketId: marketId++,
           location: action.location,
@@ -23,13 +23,13 @@ const marketsReducer = (state=initialState, action) => {
         newLocation: '',
       };
 
-    case types.UPDATE_LOCATION:
+    case actionTypes.UPDATE_LOCATION:
       return {
         ...state,
         newLocation: action.location, 
       }
 
-      case types.ADD_CARD:
+      case actionTypes.ADD_CARD:
       marketList = marketList.map(market => {
         if (market.marketId === action.marketId) market.cardCount++;
         return market
@@ -39,7 +39,7 @@ const marketsReducer = (state=initialState, action) => {
         marketList
       }
 
-    case types.DELETE_CARD:
+    case actionTypes.DELETE_CARD:
       marketList = marketList.map(market => {
         if (market.marketId === action.marketId) market.cardCount--;
         return market 
